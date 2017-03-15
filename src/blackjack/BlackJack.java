@@ -32,7 +32,7 @@ public class BlackJack {
             System.exit(0);
         }
         
-        System.out.println("Dealer ima vidno karto " + newCard[2] + " in eno skrito");
+        System.out.println("Dealer ima vidno karto " + newCard[2] + " in eno skrito.");
         int dealerTotal = newCard[2] + newCard[3];
         if(dealerTotal > 21){
             System.out.println();
@@ -67,7 +67,7 @@ public class BlackJack {
                     System.out.println();
                     x++;     
                     if (playerTotal > 21){
-                        System.out.println("You are bust, ti izgubiš.");
+                        System.out.println("Bust, ti izgubiš.");
                         System.exit(0);
                     }
                     if (playerTotal == 21){
@@ -89,8 +89,8 @@ public class BlackJack {
         while(dealerTotal <=17){
             System.out.println();
             System.out.println("Dealer se odloči za hit.");
-            System.out.println("Dobil je " + newCard[x] + ".");
             x++;
+            System.out.println("Dobil je " + newCard[x] + ".");
             dealerTotal = dealerTotal + newCard[x];
             System.out.println("Njegova vsota je " + dealerTotal + ".");
             
