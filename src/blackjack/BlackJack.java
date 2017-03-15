@@ -16,42 +16,42 @@ public class BlackJack {
         
         shuffleArray(newCard);
         
-        System.out.println("Welcome to BlackJack!");
+        System.out.println("BlackJack!");
         System.out.println();
         System.out.println("Tvoji karti sta " + newCard[0] + " in " + newCard[1] + ".");
         int playerTotal = newCard[0] + newCard[1];
         System.out.println("Vsota tvojih kart je " + playerTotal + ".");
         System.out.println();
         
-        
         if (playerTotal == 21){
-            System.out.println("Blackjack, zmaga.");
+            System.out.println("Blackjack, ti zmagaš.");
             System.exit(0);
         }
         if (playerTotal > 21){
-            System.out.println("Bust, poraz.");
+            System.out.println("Bust, ti izgubiš.");
             System.exit(0);
         }
         
-        System.out.println("Dealer ima vidno karto " + newCard[2] + " in eno skrito karto.");
+        System.out.println("Dealer ima vidno karto " + newCard[2] + " in eno skrito");
         int dealerTotal = newCard[2] + newCard[3];
-        if (dealerTotal > 21){     
+        if(dealerTotal > 21){
             System.out.println();
-            System.out.println("Vsota dealerjevih kart je " + dealerTotal + ".");
-            System.out.println("Dealer is bust, ti zmagaš!");
-            System.exit(0);
+            System.out.println("Vsota njegovih kart je " + dealerTotal + ".");
+            System.out.println("Bust, dealer izgubi.");
+            System.exit(0);            
         }
         
-        if (dealerTotal == 21) {  
+        if(dealerTotal == 21){
             System.out.println();
-            System.out.println("Dealer pokaže drugo karto: " + newCard[3] + ".");
-            System.out.println("Vsota dealerjevih kart je " + dealerTotal + ".");
+            System.out.println("Dealer pokaže drugo karto " + newCard[3]);
             System.out.println();
-            System.out.println("Dealer has BlackJack, ti izgubiš.");
+            System.out.println("Blackjack, dealer zmaga");   
             System.exit(0);
         }
+            
         System.out.println("Vsota dealerjevih kart je skrita.");
         System.out.println();
+        
         
         System.out.print("\"hit\" ali \"stay\"? ");
         String hitStay = sc.next();
@@ -80,40 +80,38 @@ public class BlackJack {
                 }
             }        
         }
-
-
+        
         sc.close();
         System.out.println("Na vrsti je dealer.");
-        System.out.println("Njegova skrita karta je " + newCard[3] + "."); 
-
-        x++; 
-        while (dealerTotal < 16){ 
+        System.out.println("Njegova skrita karta je " + newCard[3] + ".");
+        
+        x++;
+        while(dealerTotal <=17){
             System.out.println();
             System.out.println("Dealer se odloči za hit.");
             System.out.println("Dobil je " + newCard[x] + ".");
             x++;
             dealerTotal = dealerTotal + newCard[x];
-            System.out.println();
-            System.out.println("Njegova vsota je " + dealerTotal);
-
-            if (dealerTotal > 21){
+            System.out.println("Njegova vsota je " + dealerTotal + ".");
+            
+            if(dealerTotal > 21){
                 System.out.println();
-                System.out.println("Dealer is bust, Ti zmagaš!");
+                System.out.println("Bust, dealer izgubi.");
                 System.exit(0);
             }
-
-            if (dealerTotal < 21 && dealerTotal > 16){
+            
+            if(dealerTotal > 16 && dealerTotal < 21){
                 System.out.println();
-                System.out.println("Dealer Stays.");
+                System.out.println("Dealer stays.");
             }
         }
-
-        // final win sequence.
+        
         System.out.println();
-        System.out.println("Njegova vsota je " + dealerTotal);
         System.out.println("Tvoja vsota je " + playerTotal);
+        System.out.println("Njegova vsota je " + dealerTotal);
         System.out.println();
-
+        
+        
         if (dealerTotal > playerTotal){
             System.out.println("Dealer zmaga.");
         } 
@@ -129,9 +127,9 @@ public class BlackJack {
     static void shuffleArray(int[] deckCards){
 
 
-        Random rnd = new Random();
+        Random rand = new Random();
         for (int i = deckCards.length - 1; i > 0; i--){
-            int index = rnd.nextInt(i + 1);
+            int index = rand.nextInt(i + 1);
 
             int a = deckCards[index];
             deckCards[index] = deckCards[i];
