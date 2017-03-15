@@ -18,8 +18,6 @@ public class BlackJack {
         private int value;
         
         
-
-        
         public Card(){
             
             Random random=new Random();
