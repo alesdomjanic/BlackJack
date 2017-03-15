@@ -1,7 +1,6 @@
 
 package blackjack;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 
@@ -17,6 +16,8 @@ public class BlackJack {
     public class Card{
         private int rand;
         private int value;
+        
+        
 
         
         public Card(){
