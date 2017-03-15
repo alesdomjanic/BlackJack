@@ -86,11 +86,11 @@ public class BlackJack {
         System.out.println("Njegova skrita karta je " + newCard[3] + ".");
         
         x++;
-        while(dealerTotal <=17){
+        while(dealerTotal < 16){
             System.out.println();
             System.out.println("Dealer se odloči za hit.");
-            x++;
             System.out.println("Dobil je " + newCard[x] + ".");
+            x++;
             dealerTotal = dealerTotal + newCard[x];
             System.out.println("Njegova vsota je " + dealerTotal + ".");
             
