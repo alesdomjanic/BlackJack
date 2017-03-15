@@ -1,6 +1,7 @@
 
 package blackjack;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 
@@ -16,7 +17,7 @@ public class BlackJack {
     public class Card{
         private int rand;
         private int value;
-        private int suit;
+
         
         public Card(){
             
@@ -24,12 +25,26 @@ public class BlackJack {
             int number=random.nextInt(52);
             this.rand=number;
             
-            if(this.rand >=0 && this.rand <3){
-                this.value=2;
+            if(this.rand ==0){
+                this.value=1;
             }
+            if(this.rand >=10){
+                this.value=10;
+        }
+            
             
         }
         
+    }
+    
+    public class Deck{
+
+        
+        public Deck(){
+            
+            
+            
+        }
     }
     
 }
