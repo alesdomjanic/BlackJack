@@ -1,6 +1,5 @@
 
 package blackjack;
-import java.util.Random;
 
 public class Card {
     
@@ -17,8 +16,7 @@ public class Card {
     
     public int Value(){
         
-        Random rand = new Random();
-        int PlayerCard = rand.nextInt(13) + 1;
+        int PlayerCard = 0;
         
         switch(PlayerCard){
             case 2:
