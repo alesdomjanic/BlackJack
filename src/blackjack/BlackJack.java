@@ -21,6 +21,7 @@ public class BlackJack {
         Card dRand3 = d.getRandomCard6();
 
         System.out.println("BlackJack!");
+        
         System.out.println();
         System.out.print("Tvoji karti sta: " + player1.getCardToString() + " in " + player2.getCardToString() + ".");
         int playerTotal = player1.getValue() + player2.getValue();
