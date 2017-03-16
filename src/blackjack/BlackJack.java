@@ -8,16 +8,17 @@ public class BlackJack {
 
         Scanner sc = new Scanner(System.in);
 
-        Deck d = new Deck();
+        //Deck d = new Deck();
+        Deck6 d= new Deck6();
         //d.izpis();
 
-        Card player1 = d.getRandomCard();
-        Card player2 = d.getRandomCard();
-        Card pRand3 = d.getRandomCard();
+        Card player1 = d.getRandomCard6();
+        Card player2 = d.getRandomCard6();
+        Card pRand3 = d.getRandomCard6();
 
-        Card dealer1 = d.getRandomCard();
-        Card dealer2 = d.getRandomCard();
-        Card dRand3 = d.getRandomCard();
+        Card dealer1 = d.getRandomCard6();
+        Card dealer2 = d.getRandomCard6();
+        Card dRand3 = d.getRandomCard6();
 
         System.out.println("BlackJack!");
         System.out.println();
@@ -30,6 +31,7 @@ public class BlackJack {
         if (playerTotal == 21) {
             System.out.println("Blackjack, igralec zmaga.");
             System.out.println();
+            System.exit(0);
         }
 
         System.out.println("Dealer ima vidno karto " + dealer1.getCardToString() + " in eno skrito karto.");
@@ -88,7 +90,7 @@ public class BlackJack {
         System.out.println("Njegova vsota je " + dealerTotal+".");
 
         x++;
-        while (dealerTotal < 16) {
+        while (dealerTotal < 17) {
             System.out.println();
             System.out.println("Dealer se odloči za hit.");
             System.out.println("Dobil je " + dRand3.getCardToString() + ".");
@@ -103,7 +105,7 @@ public class BlackJack {
                 System.exit(0);
             }
 
-            if (dealerTotal < 21 && dealerTotal > 16) {
+            if (dealerTotal < 21 && dealerTotal > 17) {
                 System.out.println();
                 System.out.println("Dealer Stays.");
             }
