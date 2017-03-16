@@ -7,6 +7,7 @@ public class Card {
     private Barva barva;
     private Rank rank;
     private int Value;
+    private String Rank;
     
     public Card(Barva barva,Rank rank){
         this.barva = barva;
@@ -21,55 +22,55 @@ public class Card {
         
         switch(PlayerCard){
             case 2:
-                rank = "TWO";
+                Rank = "TWO";
                 Value = 2;
                 break;
             case 3:
-                rank = "THREE";
+                Rank = "THREE";
                 Value = 3;
                 break;
             case 4:
-                rank = "FOUR";
+                Rank = "FOUR";
                 Value = 4;
                 break;
             case 5:
-                rank = "FIVE";
+                Rank = "FIVE";
                 Value = 5;
                 break;
             case 6:
-                rank = "SIX";
+                Rank = "SIX";
                 Value = 6;
                 break;
             case 7:
-                rank = "SEVEN";
+                Rank = "SEVEN";
                 Value = 7;
                 break;
             case 8:
-                rank = "EIGHT";
+                Rank = "EIGHT";
                 Value = 8;
                 break;
             case 9:
-                rank = "NINE";
+                Rank = "NINE";
                 Value = 9;
                 break;
             case 10:
-                rank= "TEN"
+                Rank= "TEN";
                 Value = 10;
                 break;
             case 11:
-                rank= "JACK"
+                Rank= "JACK";
                 Value = 10;
                 break;
             case 12:
-                rank= "QUEEN"
+                Rank= "QUEEN";
                 Value = 10;
                 break;   
             case 13:
-                rank= "KING"
+                Rank= "KING";
                 Value = 10;
                 break;
             case 14:
-                rank= "AS"
+                Rank= "AS";
                 Value = 11;
                 break;  
         }
