@@ -2,7 +2,7 @@
 package blackjack;
 
 public class Card {
-    
+
     private Barva barva;
     private Rank rank;
     
@@ -12,23 +12,34 @@ public class Card {
         
     }
     
-    public void getValue(){
+    public int getValue(){
         
         switch(rank){
-        case TWO: System.out.println(2);
-        case THREE: System.out.println(3);
-        case FOUR: System.out.println(4);
-        case FIVE: System.out.println(5);
-        case SIX: System.out.println(6);
-        case SEVEN: System.out.println(7);
-        case EIGHT: System.out.println(8);
-        case NINE: System.out.println(9);
-        case TEN: System.out.println(10);
-        case JACK: System.out.println(10);
-        case QUEEN: System.out.println(10);
-        case KING: System.out.println(10);
-        case AS: System.out.println(11);
+        case TWO: return 2;
+        case THREE: return 3;
+        case FOUR: return 4;
+        case FIVE: return 5;
+        case SIX: return 6;
+        case SEVEN: return 7;
+        case EIGHT: return 8;
+        case NINE: return 9;
+        case TEN: return 10;
+        case JACK: return 10;
+        case QUEEN: return 10;
+        case KING: return 10;
+        case AS: return 11;
+        default:return 0;
         }
+        
+    }
+    
+    public void izpis(){
+        System.out.println(rank+" of "+barva);
+        
+    }
+    
+    public String getCardToString(){
+        return rank+" of "+barva;
         
     }
         
