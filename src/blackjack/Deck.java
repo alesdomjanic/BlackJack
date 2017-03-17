@@ -39,14 +39,14 @@ public class Deck {
         }
     }
     
-    public Card random(){
-        int x=52;
-        for(int i=1;i<52;i--){
-            int rand=(int)(Math.random()*x+1);
-            deck.remove(rand);
-        }
-        return rand;
-    }
+    public Card getRandomCard(){
 
+        Card c;
+        int rand = (int) (Math.random() * deck.size());
+        c = deck.get(rand);
+        deck.remove(rand);
+        return c;
+    }
+    
   }
 
